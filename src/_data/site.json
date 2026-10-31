@@ -1,0 +1,78 @@
+{
+  "name": "Levenshulme Medical Practice",
+  "address": "Dunstable Street, Levenshulme, Manchester, M19 3BX",
+  "phone": "0161 225 4033",
+  "phoneHref": "tel:+441612254033",
+  "email": "gmicb-mh.levenshulme@nhs.net",
+  "ods": "P84016",
+  "url": "https://www.levenshulmemedicalpractice.co.uk",
+  "access": [
+    {
+      "mode": "Online",
+      "hours": "8.00am to 6.30pm",
+      "detail": "Use the NHS App, or",
+      "linkText": "send us a request",
+      "link": "/help/"
+    },
+    {
+      "mode": "Telephone",
+      "hours": "[8.00am to 6.30pm]",
+      "detail": "Call",
+      "linkText": "0161 225 4033",
+      "link": "tel:+441612254033"
+    },
+    {
+      "mode": "In person",
+      "hours": "[8.00am to 6.00pm]",
+      "detail": "Visit reception at Dunstable Street.",
+      "linkText": "Find us",
+      "link": "/contact/"
+    }
+  ],
+  "building": [
+    {
+      "day": "Monday",
+      "hours": "7.00am to 6.30pm"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "8.00am to 6.30pm"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "7.00am to 6.30pm"
+    },
+    {
+      "day": "Thursday",
+      "hours": "8.00am to 6.30pm"
+    },
+    {
+      "day": "Friday",
+      "hours": "8.00am to 6.30pm"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Closed"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "links": {
+    "medicalRequest": "https://accurx.nhs.uk/patient-initiated/p84016/flow/medical-request",
+    "fitNote": "https://accurx.nhs.uk/patient-initiated/p84016/flow/fit-note",
+    "letter": "https://accurx.nhs.uk/patient-initiated/p84016/flow/doctors-letter",
+    "adminRequest": "https://accurx.nhs.uk/patient-initiated/p84016/flow/something-else",
+    "nhsApp": "https://www.nhs.uk/nhs-app/",
+    "nhsAppLogin": "https://www.nhsapp.service.nhs.uk/login",
+    "registration": "https://gp-registration.nhs.uk/P84016",
+    "catchmentMap": "https://nhs-gp-catchment.scwcsu.nhs.uk/catchment-embed/?odscode=P84016",
+    "pharmacyFinder": "https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy",
+    "nhs111": "https://111.nhs.uk/",
+    "youAndYourGp": "https://www.england.nhs.uk/publication/you-and-your-general-practice/",
+    "mskSelfReferral": "#msk-self-referral-link-to-confirm",
+    "tfgm": "https://tfgm.com/plan-a-journey",
+    "directions": "https://www.google.com/maps/dir//Levenshulme+Medical+Practice,+Dunstable+St,+Levenshulme,+Manchester+M19+3BX"
+  }
+}

@@ -1,0 +1,10 @@
+[
+  { "text": "Appointments", "url": "/appointments/" },
+  { "text": "Prescriptions", "url": "/prescriptions/" },
+  { "text": "Register", "url": "/register/" },
+  { "text": "Test results", "url": "/test-results/" },
+  { "text": "Opening hours", "url": "/opening-hours/" },
+  { "text": "Our team", "url": "/our-team/" },
+  { "text": "News", "url": "/news/" },
+  { "text": "Contact us", "url": "/contact/" }
+]

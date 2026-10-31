@@ -1,0 +1,5 @@
+---
+permalink: /tiles.json
+eleventyExcludeFromCollections: true
+---
+[{%- for t in collections.tiles %}{"id":{{ t.data.tileId | json | safe }},"pinned":{{ (t.data.pinned or false) | json | safe }},"seedRank":{{ (t.data.seedRank or 99) | json | safe }}}{% if not loop.last %},{% endif %}{% endfor %}]

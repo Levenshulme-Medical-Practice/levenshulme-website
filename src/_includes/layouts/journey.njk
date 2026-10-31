@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+{% set flags = (redflagsets[redFlagSet] if redFlagSet else []).concat(redFlags or []) | pick(redflags) %}
+<p class="breadcrumb"><a href="/help/">Everything we can help with</a></p>
+<article class="prose journey">
+<h1>{{ title }}</h1>
+<p class="lead">{{ description }}</p>
+{% if flags.length %}
+<section class="red-flags" aria-labelledby="flags-heading">
+  <h2 id="flags-heading">Get help now if you have any of these</h2>
+  <ul>
+  {%- for f in flags %}
+    <li><span>{{ f.text }}</span> <strong class="red-flags__action red-flags__action--{{ f.level }}">{{ f.action }}</strong></li>
+  {%- endfor %}
+  </ul>
+</section>
+{% endif %}
+{{ content | safe }}
+{% if actions %}
+<div class="actions">
+  {%- for a in actions %}
+  <a class="button{% if not a.primary %} button--secondary{% endif %}" href="{{ a.url }}">{{ a.label }}</a>
+  {%- endfor %}
+</div>
+{% endif %}
+</article>

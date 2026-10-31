@@ -1,0 +1,82 @@
+{
+  "heart-attack": {
+    "text": "Signs of a heart attack: pain like a very tight band, heavy weight or squeezing in the centre of your chest",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "stroke": {
+    "text": "Signs of a stroke: face drooping on one side, can’t hold both arms up, difficulty speaking",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "breathing": {
+    "text": "Severe difficulty breathing: gasping, not being able to get words out, choking or lips turning blue",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "bleeding": {
+    "text": "Heavy bleeding that won’t stop, spraying or pouring",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "injuries": {
+    "text": "Severe injuries or deep cuts after a serious accident",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "seizure": {
+    "text": "A seizure (fit): shaking or jerking because of a fit, or unconscious and can’t be woken",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "confusion": {
+    "text": "Sudden confusion: can’t be sure of own name or age, slurred speech or not making sense",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "suicide-attempt": {
+    "text": "A suicide attempt by taking something or self-harming",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "swelling": {
+    "text": "Sudden, rapid swelling of the lips, mouth, throat or tongue",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "labour": {
+    "text": "Labour or childbirth: waters breaking, more frequent intense cramps, baby coming or just born",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "sepsis": {
+    "text": "Signs of a severe infection (sepsis): blue, grey, pale or blotchy skin, lips or tongue; a rash that does not fade when you roll a glass over it; or a high temperature with a stiff neck or dislike of bright light",
+    "action": "Call 999",
+    "level": "999"
+  },
+  "cauda-equina": {
+    "text": "Back pain with numbness around your bottom or genitals, or new problems controlling your bladder or bowels",
+    "action": "Go to A&E now",
+    "level": "ae"
+  },
+  "hot-joint": {
+    "text": "A hot, swollen joint and you feel unwell or have a high temperature",
+    "action": "Contact us urgently or call 111",
+    "level": "urgent"
+  },
+  "injury-weight-bearing": {
+    "text": "A recent injury and you can’t put weight on it, or it looks out of shape",
+    "action": "Go to an urgent treatment centre or A&E",
+    "level": "ae"
+  },
+  "back-weight-loss": {
+    "text": "Back pain with unexplained weight loss or night sweats",
+    "action": "Contact us today rather than referring yourself",
+    "level": "routine"
+  },
+  "infection-worsening": {
+    "text": "An infection that is getting worse quickly, or you feel very unwell, very sleepy or confused",
+    "action": "Call 111 now, or 999 if it’s an emergency",
+    "level": "urgent"
+  }
+}

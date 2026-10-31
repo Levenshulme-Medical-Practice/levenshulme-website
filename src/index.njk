@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+title: Home
+emergencyLarge: true
+description: Levenshulme Medical Practice, Dunstable Street, Manchester. Get help, order prescriptions, see test results and contact us.
+---
+{% from "partials/icons.njk" import icon %}
+{% if notice.show %}
+<section class="notice" aria-label="Latest update" data-until="{{ notice.until }}">
+  <p class="notice__label">Latest update</p>
+  <p class="notice__headline">{{ notice.headline }}</p>
+  <p>{{ notice.body }}{% if notice.link %} <a href="{{ notice.link }}">{{ notice.linkText }}</a>{% endif %}</p>
+</section>
+{% endif %}
+
+<section class="help" aria-labelledby="help-heading">
+  <h1 id="help-heading">How can we help you today?</h1>
+  <ul class="tiles" data-tiles>
+    {%- for t in collections.tiles %}
+    <li class="tiles__item" data-tile-id="{{ t.data.tileId }}"{% if t.data.pinned %} data-pinned{% endif %}{% if loop.index > 6 %} hidden{% endif %}>
+      <a class="tile" href="{{ t.url }}" data-track-tile="{{ t.data.tileId }}" data-track-source="home">
+        <span class="tile__icon">{{ icon(t.data.icon) }}</span>
+        <span class="tile__title">{{ t.data.title }}</span>
+        <span class="tile__desc">{{ t.data.description }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+  <p><a class="see-all" href="/help/">See everything we can help with</a></p>
+</section>
+
+<section class="contact-ways" aria-labelledby="ways-heading">
+  <h2 id="ways-heading">Other ways to contact us</h2>
+  <p>Monday to Friday. You don’t need to contact us at 8am: we respond to urgent requests the same day and other requests by the end of the next working day.</p>
+  <ul class="cards cards--three">
+    {%- for a in site.access %}
+    <li class="card">
+      <h3>{{ a.mode }}</h3>
+      <p class="card__hours">{{ a.hours }}</p>
+      <p>{{ a.detail }} <a href="{{ a.link }}">{{ a.linkText }}</a></p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="news-latest" aria-labelledby="news-heading">
+  <div class="section-head">
+    <h2 id="news-heading">Practice news</h2>
+    <a href="/news/">All news</a>
+  </div>
+  <ul class="cards cards--three">
+    {%- for n in collections.news | head(3) %}
+    <li class="card card--link">
+      <a href="{{ n.url }}">
+        <span class="card__date">{{ n.date | longDate }}</span>
+        <span class="card__title">{{ n.data.title }}</span>
+        <span>{{ n.data.summary }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

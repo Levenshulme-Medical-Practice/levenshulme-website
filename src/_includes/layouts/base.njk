@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and page.url != "/" %}{{ title }} - {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ description or ('Information and help from ' + site.name + ', ' + site.address) }}">
+<meta name="theme-color" content="#005EB8">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container site-header__top">
+    <a class="site-header__brand" href="/">
+      <span class="site-header__name">{{ site.name }}</span>
+      <span class="site-header__address">{{ site.address }}</span>
+    </a>
+    <div class="site-header__tools">
+      <a class="site-header__phone" href="{{ site.phoneHref }}">{{ site.phone }}</a>
+      <a href="/translate/">Translate this page</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">{% from "partials/icons.njk" import icon %}{{ icon("menu", 20) }}Menu</button>
+    </div>
+  </div>
+  <nav class="container site-nav" id="main-nav" aria-label="Main menu">
+    <ul>
+      {%- for item in nav %}
+      <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.text }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</header>
+<main id="main" class="container main">
+{% include "partials/emergency.njk" %}
+{{ content | safe }}
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__contact">
+      <strong>{{ site.name }}</strong>
+      <span>{{ site.address }}</span>
+      <span><a href="{{ site.phoneHref }}">{{ site.phone }}</a></span>
+      <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="site-footer__links">
+        <li><a href="{{ site.links.youAndYourGp }}">You and your general practice</a></li>
+        <li><a href="/help/">Everything we can help with</a></li>
+        <li><a href="/clinics/">Clinics and services</a></li>
+        <li><a href="/out-of-hours/">When we are closed</a></li>
+        <li><a href="/named-gp/">Named GP</a></li>
+        <li><a href="/complaints/">Comments and complaints</a></li>
+        <li><a href="/gp-earnings/">GP earnings</a></li>
+        <li><a href="/privacy/">Privacy notice</a></li>
+        <li><a href="/accessibility/">Accessibility statement</a></li>
+        <li><a href="/cookies/">Cookies</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

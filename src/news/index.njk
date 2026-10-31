@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Practice news
+eleventyExcludeFromCollections: true
+tags: []
+---
+<article class="prose">
+<h1>Practice news</h1>
+</article>
+<ul class="news-list">
+{%- for n in collections.news %}
+  <li>
+    <span class="card__date">{{ n.date | longDate }}</span>
+    <a class="news-list__title" href="{{ n.url }}">{{ n.data.title }}</a>
+    <p>{{ n.data.summary }}</p>
+  </li>
+{%- endfor %}
+</ul>

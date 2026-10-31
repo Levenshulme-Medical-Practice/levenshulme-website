@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Everything we can help with
+eleventyExcludeFromCollections: true
+description: Find the right help for your health problem, prescription, test results, fit note or other request.
+---
+{% from "partials/icons.njk" import icon %}
+<article class="prose prose--wide">
+<h1>Everything we can help with</h1>
+<p class="lead">Choose the option that best describes what you need.</p>
+</article>
+<h2 class="list-heading">Health and medicines</h2>
+<ul class="help-list">
+  {%- for t in collections.tiles %}
+  <li><a href="{{ t.url }}" data-track-tile="{{ t.data.tileId }}" data-track-source="help"><span class="tile__icon">{{ icon(t.data.icon, 22) }}</span><span><strong>{{ t.data.title }}</strong><span>{{ t.data.description }}</span></span></a></li>
+  {%- endfor %}
+</ul>
+<h2 class="list-heading">Your registration and other requests</h2>
+<ul class="help-list">
+  <li><a href="/register/"><span class="tile__icon">{{ icon("document", 22) }}</span><span><strong>I want to join the practice</strong><span>Check you live in our area and register online.</span></span></a></li>
+  <li><a href="{{ site.links.adminRequest }}"><span class="tile__icon">{{ icon("letter", 22) }}</span><span><strong>I’ve changed my address or phone number</strong><span>Tell us your new details so we can keep you registered.</span></span></a></li>
+  <li><a href="/appointments/#cancel"><span class="tile__icon">{{ icon("document", 22) }}</span><span><strong>I need to cancel an appointment</strong><span>Cancel in the NHS App or let us know.</span></span></a></li>
+  <li><a href="{{ site.links.adminRequest }}"><span class="tile__icon">{{ icon("question", 22) }}</span><span><strong>I have another question for the practice</strong><span>Send us an online request about anything else that isn’t medical.</span></span></a></li>
+  <li><a href="/complaints/"><span class="tile__icon">{{ icon("letter", 22) }}</span><span><strong>I want to give feedback or make a complaint</strong><span>How to tell us what went well or what went wrong.</span></span></a></li>
+</ul>

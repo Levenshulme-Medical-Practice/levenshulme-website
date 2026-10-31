@@ -1,0 +1,35 @@
+---
+layout: layouts/page.njk
+title: Opening hours
+description: When you can contact Levenshulme Medical Practice online, by phone and in person.
+reviewed: 2026-10-31
+---
+<h2>How to contact us</h2>
+<p>Monday to Friday, excluding bank holidays.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">How</th><th scope="col">When</th></tr></thead>
+<tbody>
+{%- for a in site.access %}
+<tr><th scope="row">{{ a.mode }}</th><td>{{ a.hours }}. {{ a.detail }} <a href="{{ a.link }}">{{ a.linkText }}</a></td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p>Whichever way you contact us, we will respond the same day if your need is urgent, and by the end of the next working day if it is not.</p>
+
+<h2>Building opening times</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Day</th><th scope="col">Open</th></tr></thead>
+<tbody>
+{%- for d in site.building %}
+<tr><th scope="row">{{ d.day }}</th><td>{{ d.hours }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p>Before 8.00am the building is open for booked early appointments only. For staff security, the front door closes at 6.00pm unless you have told us you are coming.</p>
+
+<h2>When we are closed</h2>
+<p>See <a href="/out-of-hours/">when we are closed</a> for how to get help in the evening, at night and at weekends.</p>

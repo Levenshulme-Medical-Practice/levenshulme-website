@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/journey.njk",
+  "tags": ["tile"],
+  "active": true,
+  "pinned": false
+}

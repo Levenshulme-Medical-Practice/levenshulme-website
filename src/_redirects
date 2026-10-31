@@ -1,0 +1,21 @@
+# Old OPG / GP Fusion addresses -> new pages (permanent redirects)
+/pages/Appointments             /appointments/                  301
+/pages/Repeat-Prescriptions     /prescriptions/                 301
+/pages/Register                 /register/                      301
+/pages/Test-Results             /test-results/                  301
+/pages/Opening-Hours            /opening-hours/                 301
+/pages/Clinics                  /clinics/                       301
+/pages/Contact-Details          /contact/                       301
+/pages/Doctors-and-Staff        /our-team/                      301
+/pages/GP-Earnings              /gp-earnings/                   301
+/pages/Named-GP                 /named-gp/                      301
+/pages/Out-of-Hours             /out-of-hours/                  301
+/pages/Sick-Notes               /help/fit-note/                 301
+/pages/Online-Services          /help/                          301
+/pages/Home-Visits              /appointments/                  301
+/pages/Get-To-Know-Where-To-Go  /news/get-to-know-where-to-go/  301
+/pages/Weight-Management        /news/weight-loss-medicines/    301
+/pages/*                        /help/                          301
+/News/*                         /news/                          301
+/News                           /news/                          301
+/Sitemap                        /help/                          301

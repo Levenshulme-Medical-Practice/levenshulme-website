@@ -1,0 +1,8 @@
+{
+  "show": true,
+  "headline": "[Headline, for example flu vaccine clinic dates or a medicine supply problem]",
+  "body": "[One or two sentences on what patients need to know or do.]",
+  "link": null,
+  "linkText": "Read more",
+  "until": "2026-12-31"
+}

@@ -1,0 +1,11 @@
+{% if emergencyLarge %}
+<section class="emergency" aria-label="Emergencies">
+  <div class="emergency__text">
+    <p class="emergency__title">Medical emergency? Call 999 now</p>
+    <p>For example chest pain, signs of a stroke, severe difficulty breathing, heavy bleeding, a seizure or sudden confusion.</p>
+  </div>
+  <a class="emergency__link" href="{{ site.links.nhs111 }}">Need help now but it’s not an emergency? Use NHS 111</a>
+</section>
+{% else %}
+<p class="emergency emergency--compact"><strong>Medical emergency? Call 999.</strong> <span>Need help now but it’s not an emergency? <a href="{{ site.links.nhs111 }}">Use NHS 111</a> or call 111.</span></p>
+{% endif %}
